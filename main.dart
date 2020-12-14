@@ -27,8 +27,7 @@ main() {
   // Multiply each item in the list with 3.
   // The items of the final list should only contain even numbers.
   var evenList = List();
-// Write your code here
-
+  var integers = [1, 2, 3, 4, 5];
   var numBucket = List();
 
   for (var el in integers) {
