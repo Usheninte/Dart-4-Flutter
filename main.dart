@@ -1,14 +1,23 @@
-main() {
-  // print("Hello World");
-  // int myFirstDartVariable = 5;
-  // print("My first Dart variable: $myFirstDartVariable");
-  // // print(myFirstDartVariable);
+// main() {
+//   // print("Hello World");
+//   // int myFirstDartVariable = 5;
+//   // print("My first Dart variable: $myFirstDartVariable");
+//   // // print(myFirstDartVariable);
 
-  // You have to create and populate a list of cubes given a list of integers.
-  var cubes = [0, 0, 0]; // Modify cubes
-  var integers = List<int>();
-  integers.addAll([1, 2, 3]);
-  cubes.clear();
-  cubes = integers.map((num) => (num * num * num)).toList();
-  print(cubes);
+//   // You have to create and populate a list of cubes given a list of integers.
+//   var cubes = [0, 0, 0]; // Modify cubes
+//   var integers = List<int>();
+//   integers.addAll([1, 2, 3]);
+//   cubes.clear();
+//   cubes = integers.map((num) => (num * num * num)).toList();
+//   print(cubes);
+// }
+
+main() {
+  var temp = {6, 8, 23, 97, 10};
+  var temp2 = {8, 25, 7, 1, 90, 34, 23, 10};
+
+  var intersectionSet = temp.union(temp2);
+
+  print(intersectionSet);
 }
