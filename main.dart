@@ -54,20 +54,58 @@
   Sample Output: 15
 */
 
-int sum(List<int> numberList, int index) {
-  // Write your code here
+// int sum(List<int> numberList, int index) {
+//   // Write your code here
 
-  int sumBox = 0;
+//   int sumBox = 0;
 
-  for (int n in numberList) {
-    sumBox += n;
-  }
+//   for (int n in numberList) {
+//     sumBox += n;
+//   }
 
-  return sumBox;
+//   return sumBox;
 
-  // return -1; // Remove this line after writing your code
+//   // return -1; // Remove this line after writing your code
+// }
+
+// main() {
+//   print(sum([1, 2, 3, 4, 5], 4));
+// }
+
+/* You need to create a higher-order function, arithmeticCalculator, 
+  which returns the result of an arithmetic function that has two 
+  parameters of type int and returns a value of type num. */
+
+/*
+
+  Input #
+  arithmeticPrinter has three parameters.
+    - A function, f
+    - An integer, x
+    - An integer, y
+  
+  The input will be a function and two integers that will be passed to the function.
+
+  Output #
+  The output will be the result of the arithmetic function.
+
+  Sample Input #
+  add, 4, 9
+
+  Sample Output #
+  13
+
+*/
+
+num arithmeticPrinter(Function f, int x, int y) {
+  return f(x, y);
+}
+
+num add(int a, int b) {
+  return a + b;
 }
 
 main() {
-  print(sum([1, 2, 3, 4, 5], 4));
+  num x = arithmeticPrinter(add, 4, 9);
+  print(x);
 }
