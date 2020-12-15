@@ -97,15 +97,81 @@
 
 */
 
-num arithmeticPrinter(Function f, int x, int y) {
-  return f(x, y);
+// num arithmeticPrinter(Function f, int x, int y) {
+//   return f(x, y);
+// }
+
+// num add(int a, int b) {
+//   return a + b;
+// }
+
+// main() {
+//   num x = arithmeticPrinter(add, 4, 9);
+//   print(x);
+// }
+
+/**
+ * In this challenge, you need to create a nested function, max, 
+ * which will be defined in the body of the function mainMax. mainMax returns 
+ * the maximum of three numbers using the max function.
+ * 
+ * You will need to write the max function from scratch. 
+ * Take some time and try to figure out how many parameters it should have and 
+ * what the return value will be. You will also need to figure out 
+ * what mainMax will return.
+ * 
+ * Input #
+ * The inputs of the mainMax function are three numbers a, b, and c of type int.
+ * 
+ * Output #
+ * The output will be the maximum of a, b, and c.
+ * 
+ * Sample Input #
+ * mainMax(1,9,5)
+ * 
+ * Sample Output #
+ * 9
+ */
+
+int mainMax(int a, int b, int c) {
+  List<int> max(int a, int b, int c) {
+    var maxList = List<int>();
+    maxList.addAll([a, b, c]);
+    return maxList;
+  }
+
+  var maxNums = max(a, b, c);
+
+  int highest;
+
+  int a0 = maxNums[0];
+  int b0 = maxNums[1];
+  int c0 = maxNums[2];
+
+  if (a0 > b0 && a0 > c0) {
+    highest = a0;
+  } else if (b0 > a0 && b0 > c0) {
+    highest = b0;
+  } else if (c0 > a0 && c0 > b0) {
+    highest = c0;
+  }
+
+  return highest;
 }
 
-num add(int a, int b) {
-  return a + b;
-}
+// // alternative algorithm
+// int mainMax(int a, int b, int c) {
+//   int max(int x, int y) {
+//     if(x > y){
+//       return x;
+//     } else{
+//       return y;
+//     }
+//   }
+//   return max(a,max(b,c));
+// }
 
 main() {
-  num x = arithmeticPrinter(add, 4, 9);
+  num x = mainMax(1, 9, 5);
   print(x);
 }
