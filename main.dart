@@ -22,22 +22,52 @@
 //   print(intersectionSet);
 // }
 
+// main() {
+//   // You have to create and populate a list of integers using an already existing list.
+//   // Multiply each item in the list with 3.
+//   // The items of the final list should only contain even numbers.
+//   var evenList = List();
+//   var integers = [1, 2, 3, 4, 5];
+//   var numBucket = List();
+
+//   for (var el in integers) {
+//     int value = el * 3;
+//     numBucket.add(value);
+//   }
+
+//   for (var num in numBucket) {
+//     if (num % 2 == 0) {
+//       evenList.add(num);
+//     }
+//   }
+// }
+
+/*
+ In this challenge, you need to create a recursive function, 
+ sum, which returns the total sum of the integers in a List.
+ The input of the function is a list of integers, numberList, and the index of the last item in numberList.
+ The output will be the sum of all the integer in numberList. */
+
+/*
+  Sample Input: sum([1,2,3,4,5], 4)
+
+  Sample Output: 15
+*/
+
+int sum(List<int> numberList, int index) {
+  // Write your code here
+
+  int sumBox = 0;
+
+  for (int n in numberList) {
+    sumBox += n;
+  }
+
+  return sumBox;
+
+  // return -1; // Remove this line after writing your code
+}
+
 main() {
-  // You have to create and populate a list of integers using an already existing list.
-  // Multiply each item in the list with 3.
-  // The items of the final list should only contain even numbers.
-  var evenList = List();
-  var integers = [1, 2, 3, 4, 5];
-  var numBucket = List();
-
-  for (var el in integers) {
-    int value = el * 3;
-    numBucket.add(value);
-  }
-
-  for (var num in numBucket) {
-    if (num % 2 == 0) {
-      evenList.add(num);
-    }
-  }
+  print(sum([1, 2, 3, 4, 5], 4));
 }
